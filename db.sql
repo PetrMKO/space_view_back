@@ -19,3 +19,8 @@ create table blocked(
     url varchar(50) not null unique,
     userId integer not null references users(id)
 );
+
+insert into favorites(url,rating,userId) 
+values ('test1','1',1),
+('test2','4',1),
+('test3','5',1);
