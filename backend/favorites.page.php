@@ -15,11 +15,7 @@ if ($data === null || !isset($data['userId'])) {
     $stmt->execute();
     $mas=[];
     while($result=$stmt->fetch(\PDO::FETCH_ASSOC)){
-        if(!$result){
-            $response = array('status' => 'error', 'message' => 'Такого пользователя с таким паролем не существует');
-        }else{
             $mas[]=$result;
-        }
     }
     $response = array('status' => 'success', 'body'=>$mas);
 
