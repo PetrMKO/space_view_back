@@ -9,7 +9,6 @@ $stmt->execute();
 $mas=[];
 $response = array('status' => 'success');
 while($result=$stmt->fetch(\PDO::FETCH_ASSOC)){
-    // print_r($result);
     $response[] = ['userid'=>$result['userid'],
     'url'=>$result['url'],
 ];
